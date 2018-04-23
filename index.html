@@ -101,10 +101,16 @@
         $(document).ready(function() {
             var location_url = new URL(location.href);
             if (undefined == location_url.searchParams.get('sb'))
-                window.location = location_url+'?sb=14'
+            {
+                window.location = location_url+'?sb=14';
+                return;
+            }
             
             if (undefined == location_url.searchParams.get('por'))
+            {
                 window.location = location_url+'&por=1'
+                return;
+            }
             
             var CryptoJSAesJson = {
                 stringify: function (cipherParams) {
