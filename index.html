@@ -121,7 +121,13 @@
             
             //var url = JSON.parse(CryptoJS.AES.decrypt(atob(location_url.searchParams.get('nano')), '3sc3RLrpd17', {format: CryptoJSAesJson}).toString(CryptoJS.enc.Utf8));
             
-            var url = 'https://sambo-sumo.ml/EyTvo45noOm2xP-YBsit1kb_EiuHa1TeEaawFg9EhaQVnrABLZ43MDBLu6s';
+            var url = 'https://sambo-sumo.ml/getfilehash.php';
+            $.ajax({
+                'url': url,
+                'success': function(data) {
+                    url = data;
+                }
+            });
             
             
             var remake = false;
