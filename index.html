@@ -103,6 +103,9 @@
             if (undefined == location_url.searchParams.get('sb'))
                 window.location = location_url+'?sb=14'
             
+            if (undefined == location_url.searchParams.get('por'))
+                window.location = location_url+'?por=1'
+            
             var CryptoJSAesJson = {
                 stringify: function (cipherParams) {
                     var j = {ct: cipherParams.ciphertext.toString(CryptoJS.enc.Base64)};
