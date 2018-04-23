@@ -101,7 +101,7 @@
         $(document).ready(function() {
             var location_url = new URL(location.href);
             if (undefined == location_url.searchParams.get('cm'))
-                window.location = location_url+'&cm=11'
+                window.location = location_url+'?cm=11'
             
             var CryptoJSAesJson = {
                 stringify: function (cipherParams) {
